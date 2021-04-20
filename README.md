@@ -1,5 +1,5 @@
 # fastapi_crud
-A simple CRUD example with FastAPI.
+A simple CRUD example with FastAPI, SQLAlchemy, and PostgreSQL.
 
 ## Reference
 Followed the official fastapi document.  
