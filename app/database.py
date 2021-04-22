@@ -13,12 +13,12 @@ POSTGRES_HOST = os.getenv('POSTGRES_HOST', '127.0.0.1')
 POSTGRES_PORT = os.getenv('POSTGRES_PORT', 5432)
 POSTGRES_DB = os.getenv('POSTGRES_DB', 'fastapi')
 
-SQLALCHEMY_DATABASE_URL = ("postgresql://",
-                           POSTGRES_USERNAME, ":",
-                           POSTGRES_PASSWORD, "@",
-                           POSTGRES_HOST, ":",
-                           POSTGRES_PORT, "/",
-                           POSTGRES_DB)
+SQLALCHEMY_DATABASE_URL = ("postgresql://"
+                           f"{POSTGRES_USERNAME}:"
+                           f"{POSTGRES_PASSWORD}@"
+                           f"{POSTGRES_HOST}:"
+                           f"{POSTGRES_PORT}/"
+                           f"{POSTGRES_DB}")
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
