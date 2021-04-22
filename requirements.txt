@@ -2,5 +2,6 @@ alembic
 fastapi
 psycopg2-binary
 pydantic
+python-dotenv
 SQLAlchemy
 uvicorn
