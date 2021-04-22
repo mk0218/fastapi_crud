@@ -12,7 +12,10 @@ e.g., venv, which is provided by python itself.
 $ python3 -m venv venv
 $ source venv/bin/activate
 ```
-### Install dependencies
+Now, install dependencies and run server.
 ```
-$ pip install -r requirements.txt
+(venv) $ pip install -r requirements.txt
+...
+(venv) $ uvicorn --reload app.main:app
+INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
